@@ -6,13 +6,17 @@
 //
 import SwiftUI
 struct CoctailListNavigationCell: View {
-    var coctailModel: CoctailModel
+    let coctailModel: CoctailModel
+    @State var selected: Int? = 0
+    
     var body: some View {
-        
         NavigationLink(
             destination: CoctailView(coctailModel: coctailModel),
+            tag: 1,
+            selection: $selected,
             label: {
                 Text(coctailModel.name)
-            })
+            }
+        )
     }
 }

@@ -23,6 +23,7 @@ struct MainScreen: View {
                 .frame(width: 200)
             Button(action: {
                 tabRouter.currentTab = TabRoute.coctail
+                tabRouter.currentAction = TabAction.select
             }){
                 Text("Change to tab 2")
             }

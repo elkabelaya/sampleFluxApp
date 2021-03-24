@@ -23,11 +23,17 @@ struct ContentView: View {
                     Text("Coctail")
                     Image(systemName:"magnifyingglass.circle.fill")
                 }.tag(TabRoute.coctail)
+            CatalogScreen()
+                .tabItem {
+                    Text("Catalog")
+                    Image(systemName:"folder.circle.fill")
+                }.tag(TabRoute.catalog)
             AboutScreen()
                 .tabItem {
                     Text("About")
                     Image(systemName:"questionmark.circle.fill")
                 }.tag(TabRoute.about)
+            
             
         }
     }
