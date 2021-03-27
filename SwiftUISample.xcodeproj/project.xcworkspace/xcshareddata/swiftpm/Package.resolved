@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "UIComponents",
+        "repositoryURL": "https://github.com/elkabelaya/CustomSwiftUi.git",
+        "state": {
+          "branch": "main",
+          "revision": "a4ccb54c7ce4a271775143026b27505f2e29717a",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
