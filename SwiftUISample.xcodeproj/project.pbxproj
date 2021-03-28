@@ -26,9 +26,10 @@
 		8F90020925FE161C00DBED49 /* AsyncImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90020825FE161C00DBED49 /* AsyncImageViewModel.swift */; };
 		8F90020D25FE3B3500DBED49 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90020C25FE3B3500DBED49 /* FilterView.swift */; };
 		8F90021D2600743400DBED49 /* CatalogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F90021C2600743300DBED49 /* CatalogScreen.swift */; };
-		8F9002212600747100DBED49 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 8F9002202600747100DBED49 /* UIComponents */; };
 		8F99B244260AF48F0042E7B5 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F99B243260AF48F0042E7B5 /* ViewExtension.swift */; };
-		8F99B24B260F35E80042E7B5 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 8F99B24A260F35E80042E7B5 /* UIComponents */; };
+		8F99B256260F54320042E7B5 /* SwiftUIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 8F99B255260F54320042E7B5 /* SwiftUIComponents */; };
+		8F99B25E260F5BF90042E7B5 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F99B25D260F5BF90042E7B5 /* AnyTransition.swift */; };
+		8F99B263260F5C550042E7B5 /* TwoColumnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F99B262260F5C550042E7B5 /* TwoColumnScreen.swift */; };
 		8FDB06EB25FB23A1009ED57E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDB06EA25FB23A1009ED57E /* AppDelegate.swift */; };
 		8FDB06ED25FB23A1009ED57E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDB06EC25FB23A1009ED57E /* SceneDelegate.swift */; };
 		8FDB06EF25FB23A1009ED57E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDB06EE25FB23A1009ED57E /* ContentView.swift */; };
@@ -61,6 +62,9 @@
 		8F90020C25FE3B3500DBED49 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		8F90021C2600743300DBED49 /* CatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreen.swift; sourceTree = "<group>"; };
 		8F99B243260AF48F0042E7B5 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		8F99B24F260F4D7F0042E7B5 /* SwiftUIComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIComponents; path = ../../../projects/SwiftUISample/SwiftUISample/SwiftUIComponents; sourceTree = "<group>"; };
+		8F99B25D260F5BF90042E7B5 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
+		8F99B262260F5C550042E7B5 /* TwoColumnScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnScreen.swift; sourceTree = "<group>"; };
 		8FDB06E725FB23A1009ED57E /* SwiftUISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUISample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FDB06EA25FB23A1009ED57E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FDB06EC25FB23A1009ED57E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,8 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F99B24B260F35E80042E7B5 /* UIComponents in Frameworks */,
-				8F9002212600747100DBED49 /* UIComponents in Frameworks */,
+				8F99B256260F54320042E7B5 /* SwiftUIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,9 +163,27 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		8F99B25C260F5BC70042E7B5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8F99B25D260F5BF90042E7B5 /* AnyTransition.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8F99B261260F5C390042E7B5 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				8F90021C2600743300DBED49 /* CatalogScreen.swift */,
+				8F99B262260F5C550042E7B5 /* TwoColumnScreen.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
 		8FDB06DE25FB23A1009ED57E = {
 			isa = PBXGroup;
 			children = (
+				8F99B24F260F4D7F0042E7B5 /* SwiftUIComponents */,
 				8F90000625FB32ED00DBED49 /* README.MD */,
 				8FDB06E925FB23A1009ED57E /* SwiftUISample */,
 				8FDB06E825FB23A1009ED57E /* Products */,
@@ -181,6 +202,7 @@
 		8FDB06E925FB23A1009ED57E /* SwiftUISample */ = {
 			isa = PBXGroup;
 			children = (
+				8F99B25C260F5BC70042E7B5 /* Extension */,
 				8F99B242260AF46F0042E7B5 /* Utils */,
 				8F9001F325FE0B5C00DBED49 /* Models */,
 				8F9001F225FE0AD000DBED49 /* ViewModels */,
@@ -212,10 +234,10 @@
 		8FDB070B25FB2A90009ED57E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8F99B261260F5C390042E7B5 /* Catalog */,
 				8FDB070825FB2A26009ED57E /* AboutScreen.swift */,
 				8FDB070525FB2A16009ED57E /* CoctailsScreen.swift */,
 				8FDB070225FB29E8009ED57E /* MainScreen.swift */,
-				8F90021C2600743300DBED49 /* CatalogScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -237,8 +259,7 @@
 			);
 			name = SwiftUISample;
 			packageProductDependencies = (
-				8F9002202600747100DBED49 /* UIComponents */,
-				8F99B24A260F35E80042E7B5 /* UIComponents */,
+				8F99B255260F54320042E7B5 /* SwiftUIComponents */,
 			);
 			productName = SwiftUISample;
 			productReference = 8FDB06E725FB23A1009ED57E /* SwiftUISample.app */;
@@ -268,7 +289,6 @@
 			);
 			mainGroup = 8FDB06DE25FB23A1009ED57E;
 			packageReferences = (
-				8F99B249260F35E80042E7B5 /* XCRemoteSwiftPackageReference "CustomSwiftUi" */,
 			);
 			productRefGroup = 8FDB06E825FB23A1009ED57E /* Products */;
 			projectDirPath = "";
@@ -299,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F99B263260F5C550042E7B5 /* TwoColumnScreen.swift in Sources */,
 				8F90020D25FE3B3500DBED49 /* FilterView.swift in Sources */,
 				8F9001F525FE0B9300DBED49 /* CoctailListModel.swift in Sources */,
 				8F9001EA25FE087900DBED49 /* EndpointType.swift in Sources */,
@@ -313,6 +334,7 @@
 				8FDB070925FB2A26009ED57E /* AboutScreen.swift in Sources */,
 				8FDB070625FB2A16009ED57E /* CoctailsScreen.swift in Sources */,
 				8F9001E725FE07A400DBED49 /* CoctailAPI.swift in Sources */,
+				8F99B25E260F5BF90042E7B5 /* AnyTransition.swift in Sources */,
 				8F90020925FE161C00DBED49 /* AsyncImageViewModel.swift in Sources */,
 				8F9001FC25FE0FA000DBED49 /* CoctailListNavigationCell.swift in Sources */,
 				8F9001BC25FC7D8000DBED49 /* TabRoutes.swift in Sources */,
@@ -521,26 +543,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		8F99B249260F35E80042E7B5 /* XCRemoteSwiftPackageReference "CustomSwiftUi" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/elkabelaya/CustomSwiftUi.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		8F9002202600747100DBED49 /* UIComponents */ = {
+		8F99B255260F54320042E7B5 /* SwiftUIComponents */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = UIComponents;
-		};
-		8F99B24A260F35E80042E7B5 /* UIComponents */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8F99B249260F35E80042E7B5 /* XCRemoteSwiftPackageReference "CustomSwiftUi" */;
-			productName = UIComponents;
+			productName = SwiftUIComponents;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
