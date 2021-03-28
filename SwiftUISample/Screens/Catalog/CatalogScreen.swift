@@ -36,6 +36,10 @@ struct CatalogScreenContent: View {
                     }){
                         Text("custom button")
                     }
+                    Button("Quit") {
+                        print("Quit")
+                    }
+                    .buttonStyle(WhiteButton())
                 }//HStack
                 LazyVGrid(columns: columns){
                     ForEach((0...1000), id: \.self) {

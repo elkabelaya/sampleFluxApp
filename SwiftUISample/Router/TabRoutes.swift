@@ -10,6 +10,7 @@ enum TabRoute {
     case main
     case coctail
     case catalog
+    case recipe
     case about
     
 }

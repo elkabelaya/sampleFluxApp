@@ -28,6 +28,11 @@ struct ContentView: View {
                     Text("Catalog")
                     Image(systemName:"folder.circle.fill")
                 }.tag(TabRoute.catalog)
+            RecipeScreen()
+                .tabItem {
+                    Text("Recipe")
+                    Image(systemName:"book.circle.fill")
+                }.tag(TabRoute.recipe)
             AboutScreen()
                 .tabItem {
                     Text("About")
