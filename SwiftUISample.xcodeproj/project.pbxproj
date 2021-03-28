@@ -62,9 +62,9 @@
 		8F90020C25FE3B3500DBED49 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		8F90021C2600743300DBED49 /* CatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreen.swift; sourceTree = "<group>"; };
 		8F99B243260AF48F0042E7B5 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		8F99B24F260F4D7F0042E7B5 /* SwiftUIComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIComponents; path = ../../../projects/SwiftUISample/SwiftUISample/SwiftUIComponents; sourceTree = "<group>"; };
 		8F99B25D260F5BF90042E7B5 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
 		8F99B262260F5C550042E7B5 /* TwoColumnScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnScreen.swift; sourceTree = "<group>"; };
+		8F99B27326104B4B0042E7B5 /* SwiftUIComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIComponents; path = Modules/SwiftUIComponents; sourceTree = "<group>"; };
 		8FDB06E725FB23A1009ED57E /* SwiftUISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUISample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FDB06EA25FB23A1009ED57E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FDB06EC25FB23A1009ED57E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		8FDB06DE25FB23A1009ED57E = {
 			isa = PBXGroup;
 			children = (
-				8F99B24F260F4D7F0042E7B5 /* SwiftUIComponents */,
+				8F99B27326104B4B0042E7B5 /* SwiftUIComponents */,
 				8F90000625FB32ED00DBED49 /* README.MD */,
 				8FDB06E925FB23A1009ED57E /* SwiftUISample */,
 				8FDB06E825FB23A1009ED57E /* Products */,
