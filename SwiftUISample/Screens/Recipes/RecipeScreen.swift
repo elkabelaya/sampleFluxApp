@@ -26,7 +26,7 @@ struct RecipeCell: View {
                 Divider()
                 HStack {
                     Spacer()
-                    ActivityIndicatorView()
+                    CustomActivityIndicatorView()
                     Spacer()
                 }
                 
@@ -36,29 +36,61 @@ struct RecipeCell: View {
     
 }
 
+struct RecipeButtonView: View {
+    let text: String
+    let onTapGesture: () -> Void
+    var body: some View {
+        Text(text)
+            .padding()
+            .background(Color.orange)
+            .foregroundColor(Color.white)
+            .onTapGesture {
+                onTapGesture()
+            }
+    }
+}
+
+
 struct RecipeScreen: View {
-    
+    private var pickerElements = ["salad",
+                                  "soup",
+                                  "baking"]
+    @State private var selectedCategoryIndex = 0
     @StateObject var recipePuppyViewModel: RecipePuppyViewModel = .init()
-    
+
     var body: some View {
         NavigationView {
-            List(recipePuppyViewModel.items) { item in
-                
-                    NavigationLink(destination: RecipeDetailScreen()) {
-                        RecipeCell(item: item)
-                            .environmentObject(recipePuppyViewModel)
-                            .onAppear() {
-                                if recipePuppyViewModel.items.isLast(item) {
-                                    recipePuppyViewModel.loadPage()
-                                }
-                            }
-                    }//NavigationLink
+            VStack {
+                Picker("Favorite Color", selection: $selectedCategoryIndex, content: {
+                    ForEach(0..<pickerElements.count) { i in
+                        Text(pickerElements[i]).tag(i)
+                    }
+                })
+                .pickerStyle(SegmentedPickerStyle())
+                .onAppear(){
+                    recipePuppyViewModel.loadRecipes(category: pickerElements[selectedCategoryIndex])
+                }
+                .onChange(of: selectedCategoryIndex, perform: { (value) in
+                    recipePuppyViewModel.loadRecipes(category: pickerElements[value])
+                })
+                if (recipePuppyViewModel.isPageLoading){
+                    CustomActivityIndicatorView()
+                } 
+                List(recipePuppyViewModel.items) { item in
                     
+                        NavigationLink(destination: RecipeDetailScreen()) {
+                            RecipeCell(item: item)
+                                .environmentObject(recipePuppyViewModel)
+                                .onAppear() {
+                                    if recipePuppyViewModel.items.isLast(item) {
+                                        recipePuppyViewModel.loadNextPage()
+                                    }
+                                }
+                        }//NavigationLink
+                        
 
-            } // List
-            .navigationTitle("Recipes")
-            .onAppear() {
-                recipePuppyViewModel.loadPage()
+                } // List
+                .navigationBarTitle("Recipes")
             }
         }
     }

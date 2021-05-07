@@ -23,15 +23,16 @@ struct CatalogScreenContent: View {
     var body: some View {
         GeometryReader { geometry in
             VStack{
+                NavPushButton(destination: SecondScreen()) {
+                    Text("CustomNavigationStack, 2nd level")
+                        .padding()
+                        .background(Color.green)
+                        .foregroundColor(Color.white)
+                }
                 HStack{
-                    NavPushButton(destination: SecondScreen()) {
-                        Text("Second")
-                            .padding()
-                            .background(Color.green)
-                            .foregroundColor(Color.white)
-                    }
-                    ActivityIndicatorView()
-                    CustomButton (action:{
+                    
+                    CustomActivityIndicatorView()
+                    CustomButtonView (action:{
                         print("custom button")
                     }){
                         Text("custom button")
@@ -59,7 +60,7 @@ struct SecondScreen: View {
     var body: some View {
         VStack(spacing: 50) {
             NavPushButton(destination: TwoColumnScreen()) {
-                Text("Two Column for SwiftUI 1.0")
+                Text("CustomNavigationStack, 3nd level")
                     .padding()
                     .background(Color.green)
                     .foregroundColor(Color.white)

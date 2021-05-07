@@ -8,15 +8,15 @@
 import UIKit
 import SwiftUI
 
-public struct ActivityIndicatorView: UIViewRepresentable {
+public struct CustomActivityIndicatorView: UIViewRepresentable {
     
     public init() {}
     
-    public func makeUIView(context: UIViewRepresentableContext<ActivityIndicatorView>) -> UIActivityIndicatorView {
+    public func makeUIView(context: UIViewRepresentableContext<CustomActivityIndicatorView>) -> UIActivityIndicatorView {
         UIActivityIndicatorView(style: .large)
     }
     
-    public func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicatorView>) {
+    public func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<CustomActivityIndicatorView>) {
         uiView.startAnimating()
     }
 }
@@ -26,7 +26,7 @@ struct ActivityIndicatorView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             Text("Preview")
-            ActivityIndicatorView()
+            CustomActivityIndicatorView()
         }
     }
 }

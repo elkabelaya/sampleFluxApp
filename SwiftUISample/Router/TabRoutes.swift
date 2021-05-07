@@ -8,15 +8,10 @@
 enum TabRoute {
     case undefined
     case main
-    case coctail
+    case food
     case catalog
     case recipe
     case about
     
 }
 
-enum TabAction: Int {
-    case undefined = 0
-    case select = 1
-    
-}

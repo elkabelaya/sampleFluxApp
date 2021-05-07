@@ -13,4 +13,10 @@ extension String {
         self.filter { !"\n\t\r".contains($0) }
     }
     
+    
+    
+}
+
+extension String: Identifiable {
+    public var id: String { self }
 }

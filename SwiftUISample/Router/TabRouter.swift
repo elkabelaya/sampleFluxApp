@@ -9,5 +9,5 @@ import SwiftUI
 
 class TabRouter: ObservableObject {
     @Published var currentTab:TabRoute = TabRoute.undefined
-    @Published var currentAction:TabAction = TabAction.undefined
+    @Published var isSuperFoodShowed = false
 }

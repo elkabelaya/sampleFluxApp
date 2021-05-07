@@ -18,11 +18,11 @@ struct ContentView: View {
                     Text("Main")
                     Image(systemName: "house.circle.fill")
                 }.tag(TabRoute.main)
-            CoctailsScreen()
+            FoodScreen()
                 .tabItem {
-                    Text("Coctail")
+                    Text("Food")
                     Image(systemName:"magnifyingglass.circle.fill")
-                }.tag(TabRoute.coctail)
+                }.tag(TabRoute.food)
             CatalogScreen()
                 .tabItem {
                     Text("Catalog")

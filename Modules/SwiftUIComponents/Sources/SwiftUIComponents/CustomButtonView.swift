@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-public struct CustomButton<Content>: View where Content: View {
+public struct CustomButtonView<Content>: View where Content: View {
     private let action: () -> Void
     private let content:() -> Content
     
@@ -38,7 +38,7 @@ public struct CustomButton<Content>: View where Content: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomButton( action: {}){
+        CustomButtonView( action: {}){
             Text("CustomButton")
         }
     }
