@@ -18,16 +18,21 @@ struct ContentView: View {
                     Text("Main")
                     Image(systemName: "house.circle.fill")
                 }.tag(TabRoute.main)
-            CoctailsScreen()
+            FoodScreen()
                 .tabItem {
-                    Text("Coctail")
+                    Text("Food")
                     Image(systemName:"magnifyingglass.circle.fill")
-                }.tag(TabRoute.coctail)
+                }.tag(TabRoute.food)
             CatalogScreen()
                 .tabItem {
                     Text("Catalog")
                     Image(systemName:"folder.circle.fill")
                 }.tag(TabRoute.catalog)
+            RecipeScreen()
+                .tabItem {
+                    Text("Recipe")
+                    Image(systemName:"book.circle.fill")
+                }.tag(TabRoute.recipe)
             AboutScreen()
                 .tabItem {
                     Text("About")
