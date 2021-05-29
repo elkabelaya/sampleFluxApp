@@ -705,5 +705,115 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2AE8C8A1-CFF4-4EF5-BA90-490AF1AE2415"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUISample/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ContentView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "2AE8C8A1-CFF4-4EF5-BA90-490AF1AE2415 - 5bbcaab1dfed8839"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of SwiftUISample.ContentView.tabRouter : SwiftUISample.TabRouter"
+                  moduleName = "SwiftUISample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elkabelaya/Documents/projects/customInjection/SwiftUISample/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "2AE8C8A1-CFF4-4EF5-BA90-490AF1AE2415 - e19d988a39c7f9f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUISample.ContentView.tabRouter.getter : SwiftUISample.TabRouter"
+                  moduleName = "SwiftUISample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elkabelaya/Documents/projects/customInjection/SwiftUISample/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "2AE8C8A1-CFF4-4EF5-BA90-490AF1AE2415 - b78141abeed304b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUISample.ContentView.$tabRouter.getter : SwiftUI.ObservedObject&lt;SwiftUISample.TabRouter&gt;.Wrapper"
+                  moduleName = "SwiftUISample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elkabelaya/Documents/projects/customInjection/SwiftUISample/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "2AE8C8A1-CFF4-4EF5-BA90-490AF1AE2415 - 5fc03b3c6df8a79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUISample.ContentView.init() -&gt; SwiftUISample.ContentView"
+                  moduleName = "SwiftUISample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elkabelaya/Documents/projects/customInjection/SwiftUISample/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5FE23DE2-731F-4EE1-AEAB-9E9BD33FEA32"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUISample/Injection/ServiceLocator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "inject()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E26BE46-04AE-4B36-B3FA-BA0B909BCCAD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ServiceLocatorSample/Screens/Recipes/RecipeScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

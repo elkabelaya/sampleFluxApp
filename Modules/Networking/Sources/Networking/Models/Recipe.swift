@@ -9,7 +9,7 @@ import Foundation
 
 public struct Recipe: Codable {
 
-    public var title: String?
+    public var title: String
     public var href: String
     public var ingredients: String?
     public var thumbnail: String?

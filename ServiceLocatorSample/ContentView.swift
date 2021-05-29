@@ -10,7 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject var tabRouter:TabRouter
+    @StateObject var tabRouter:TabRouter = ServiceLocator.assembly.inject()
+    
     var body: some View {
         TabView(selection: $tabRouter.currentTab){
             MainScreen()
@@ -18,16 +19,6 @@ struct ContentView: View {
                     Text("Main")
                     Image(systemName: "house.circle.fill")
                 }.tag(TabRoute.main)
-            FoodScreen()
-                .tabItem {
-                    Text("Food")
-                    Image(systemName:"magnifyingglass.circle.fill")
-                }.tag(TabRoute.food)
-            CatalogScreen()
-                .tabItem {
-                    Text("Catalog")
-                    Image(systemName:"folder.circle.fill")
-                }.tag(TabRoute.catalog)
             RecipeScreen()
                 .tabItem {
                     Text("Recipe")

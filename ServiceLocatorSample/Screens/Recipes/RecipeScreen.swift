@@ -17,7 +17,7 @@ struct RecipeCell: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text( item.title.asStringOrEmpty.trim())
+            Text( item.title.trim())
                 .font(.headline)
             Text(item.ingredients.asStringOrEmpty.trim())
                 .font(.callout)
@@ -55,8 +55,10 @@ struct RecipeScreen: View {
     private var pickerElements = ["salad",
                                   "soup",
                                   "baking"]
+    private let analytics:Analytics = ServiceLocator.assembly.inject()
     @State private var selectedCategoryIndex = 0
     @StateObject var recipePuppyViewModel: RecipePuppyViewModel = .init()
+    
 
     var body: some View {
         NavigationView {
@@ -85,6 +87,9 @@ struct RecipeScreen: View {
                                     if recipePuppyViewModel.items.isLast(item) {
                                         recipePuppyViewModel.loadNextPage()
                                     }
+                                }
+                                .onTapGesture {
+                                    analytics.event(.coctailSelect, ["title": item.title])
                                 }
                         }//NavigationLink
                         
