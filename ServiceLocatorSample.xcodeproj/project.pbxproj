@@ -12,9 +12,6 @@
 		8F9001BC25FC7D8000DBED49 /* TabRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9001BB25FC7D8000DBED49 /* TabRoutes.swift */; };
 		8F9001C825FC8FE900DBED49 /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9001C725FC8FE900DBED49 /* BindingExtension.swift */; };
 		8F9001DF25FCFB3F00DBED49 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9001DE25FCFB3F00DBED49 /* Colors.xcassets */; };
-		8F9001F525FE0B9300DBED49 /* CoctailListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9001F425FE0B9300DBED49 /* CoctailListModel.swift */; };
-		8F9001FC25FE0FA000DBED49 /* CoctailListNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9001FB25FE0FA000DBED49 /* CoctailListNavigationCell.swift */; };
-		8F90020025FE13D300DBED49 /* CoctailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9001FF25FE13D300DBED49 /* CoctailView.swift */; };
 		8F99B244260AF48F0042E7B5 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F99B243260AF48F0042E7B5 /* ViewExtension.swift */; };
 		8F99B256260F54320042E7B5 /* SwiftUIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 8F99B255260F54320042E7B5 /* SwiftUIComponents */; };
 		8F99B25E260F5BF90042E7B5 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F99B25D260F5BF90042E7B5 /* AnyTransition.swift */; };
@@ -44,9 +41,6 @@
 		8F9001BB25FC7D8000DBED49 /* TabRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRoutes.swift; sourceTree = "<group>"; };
 		8F9001C725FC8FE900DBED49 /* BindingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtension.swift; sourceTree = "<group>"; };
 		8F9001DE25FCFB3F00DBED49 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		8F9001F425FE0B9300DBED49 /* CoctailListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailListModel.swift; sourceTree = "<group>"; };
-		8F9001FB25FE0FA000DBED49 /* CoctailListNavigationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailListNavigationCell.swift; sourceTree = "<group>"; };
-		8F9001FF25FE13D300DBED49 /* CoctailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailView.swift; sourceTree = "<group>"; };
 		8F99B243260AF48F0042E7B5 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		8F99B25D260F5BF90042E7B5 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
 		8F99B27326104B4B0042E7B5 /* SwiftUIComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIComponents; path = Modules/SwiftUIComponents; sourceTree = "<group>"; };
@@ -94,29 +88,12 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		8F9001C125FC87F400DBED49 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8F9001FB25FE0FA000DBED49 /* CoctailListNavigationCell.swift */,
-				8F9001FF25FE13D300DBED49 /* CoctailView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		8F9001C625FC8FC700DBED49 /* DevUtils */ = {
 			isa = PBXGroup;
 			children = (
 				8F9001C725FC8FE900DBED49 /* BindingExtension.swift */,
 			);
 			path = DevUtils;
-			sourceTree = "<group>";
-		};
-		8F9001F325FE0B5C00DBED49 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				8F9001F425FE0B9300DBED49 /* CoctailListModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		8F90021F2600747100DBED49 /* Frameworks */ = {
@@ -190,9 +167,7 @@
 				8FFDB7B526621FC1007FA20A /* Services */,
 				8FE887D7261087BC007A4057 /* Assets */,
 				8F99B25C260F5BC70042E7B5 /* Extension */,
-				8F9001F325FE0B5C00DBED49 /* Models */,
 				8F9001C625FC8FC700DBED49 /* DevUtils */,
-				8F9001C125FC87F400DBED49 /* Views */,
 				8FDB070B25FB2A90009ED57E /* Screens */,
 				8FDB06EA25FB23A1009ED57E /* AppDelegate.swift */,
 				8FDB06EC25FB23A1009ED57E /* SceneDelegate.swift */,
@@ -338,7 +313,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FE887DA2610965B007A4057 /* Image.swift in Sources */,
-				8F9001F525FE0B9300DBED49 /* CoctailListModel.swift in Sources */,
 				8FE887D0261072C0007A4057 /* Optional.swift in Sources */,
 				8FFDB7B426621B30007FA20A /* ServiceLocator.swift in Sources */,
 				8FDB06EB25FB23A1009ED57E /* AppDelegate.swift in Sources */,
@@ -348,7 +322,6 @@
 				8FFDB7B826622036007FA20A /* Analytics.swift in Sources */,
 				8FDB070925FB2A26009ED57E /* AboutScreen.swift in Sources */,
 				8F99B25E260F5BF90042E7B5 /* AnyTransition.swift in Sources */,
-				8F9001FC25FE0FA000DBED49 /* CoctailListNavigationCell.swift in Sources */,
 				8F99B28026105F5D0042E7B5 /* RecipePuppyViewModel.swift in Sources */,
 				8FE887CE261072C0007A4057 /* Collection.swift in Sources */,
 				8F9001BC25FC7D8000DBED49 /* TabRoutes.swift in Sources */,
@@ -357,7 +330,6 @@
 				8FDB070325FB29E8009ED57E /* MainScreen.swift in Sources */,
 				8FDB06EF25FB23A1009ED57E /* ContentView.swift in Sources */,
 				8F9001B825FC79E400DBED49 /* TabRouter.swift in Sources */,
-				8F90020025FE13D300DBED49 /* CoctailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

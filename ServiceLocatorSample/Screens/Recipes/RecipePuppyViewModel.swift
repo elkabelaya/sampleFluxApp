@@ -28,7 +28,7 @@ final class RecipePuppyViewModel: ObservableObject {
         page += 1
         RecipeAPI.getRecipe(i: "", q: category, p: page) { response, error in
             if let results = response?.results {
-                print(results)
+                //print(results)
                 self.items.append(contentsOf: results)
                 self.isPageLoading = false
             }

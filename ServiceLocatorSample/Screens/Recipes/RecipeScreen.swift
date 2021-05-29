@@ -58,7 +58,7 @@ struct RecipeScreen: View {
     private let analytics:Analytics = ServiceLocator.assembly.inject()
     @State private var selectedCategoryIndex = 0
     @StateObject var recipePuppyViewModel: RecipePuppyViewModel = .init()
-    
+    @State private var navigationLinkSelection:String? = nil
 
     var body: some View {
         NavigationView {
@@ -80,7 +80,7 @@ struct RecipeScreen: View {
                 } 
                 List(recipePuppyViewModel.items) { item in
                     
-                        NavigationLink(destination: RecipeDetailScreen()) {
+                    NavigationLink(destination: RecipeDetailScreen(recipe: item), tag: item.id, selection:$navigationLinkSelection) {
                             RecipeCell(item: item)
                                 .environmentObject(recipePuppyViewModel)
                                 .onAppear() {
@@ -89,6 +89,7 @@ struct RecipeScreen: View {
                                     }
                                 }
                                 .onTapGesture {
+                                    navigationLinkSelection = item.id
                                     analytics.event(.coctailSelect, ["title": item.title])
                                 }
                         }//NavigationLink
@@ -102,10 +103,12 @@ struct RecipeScreen: View {
 }
 
 struct RecipeDetailScreen: View {
- 
+    let recipe: Recipe
     var body: some View {
-        Text("🥗")
-            .font(Font.system(size: 200))
+        Text(recipe.title)
+            .font(Font.system(size: 20))
+        Text(recipe.ingredients ?? "")
+            .font(Font.system(size: 10))
     }
     
 }
