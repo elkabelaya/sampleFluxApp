@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F1454C4266CD00000AD5FF2 /* RecipeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1454C3266CD00000AD5FF2 /* RecipeExtension.swift */; };
+		8F4F05522664B375003ECAA6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4F05512664B375003ECAA6 /* Store.swift */; };
+		8F4F05552664B3F6003ECAA6 /* RecipeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4F05542664B3F6003ECAA6 /* RecipeStore.swift */; };
 		8F90000725FB32ED00DBED49 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 8F90000625FB32ED00DBED49 /* README.MD */; };
 		8F9001B825FC79E400DBED49 /* TabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9001B725FC79E400DBED49 /* TabRouter.swift */; };
 		8F9001BC25FC7D8000DBED49 /* TabRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9001BB25FC7D8000DBED49 /* TabRoutes.swift */; };
@@ -16,7 +19,6 @@
 		8F99B256260F54320042E7B5 /* SwiftUIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 8F99B255260F54320042E7B5 /* SwiftUIComponents */; };
 		8F99B25E260F5BF90042E7B5 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F99B25D260F5BF90042E7B5 /* AnyTransition.swift */; };
 		8F99B27B26105ED70042E7B5 /* RecipeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F99B27A26105ED70042E7B5 /* RecipeScreen.swift */; };
-		8F99B28026105F5D0042E7B5 /* RecipePuppyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F99B27F26105F5D0042E7B5 /* RecipePuppyViewModel.swift */; };
 		8F99B2872610650C0042E7B5 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 8F99B2862610650C0042E7B5 /* Networking */; };
 		8FDB06EB25FB23A1009ED57E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDB06EA25FB23A1009ED57E /* AppDelegate.swift */; };
 		8FDB06ED25FB23A1009ED57E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDB06EC25FB23A1009ED57E /* SceneDelegate.swift */; };
@@ -36,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F1454C3266CD00000AD5FF2 /* RecipeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeExtension.swift; sourceTree = "<group>"; };
+		8F4F05512664B375003ECAA6 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		8F4F05542664B3F6003ECAA6 /* RecipeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStore.swift; sourceTree = "<group>"; };
 		8F90000625FB32ED00DBED49 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		8F9001B725FC79E400DBED49 /* TabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRouter.swift; sourceTree = "<group>"; };
 		8F9001BB25FC7D8000DBED49 /* TabRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRoutes.swift; sourceTree = "<group>"; };
@@ -46,8 +51,7 @@
 		8F99B27326104B4B0042E7B5 /* SwiftUIComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftUIComponents; path = Modules/SwiftUIComponents; sourceTree = "<group>"; };
 		8F99B2762610542E0042E7B5 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Networking; path = Modules/Networking; sourceTree = "<group>"; };
 		8F99B27A26105ED70042E7B5 /* RecipeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeScreen.swift; sourceTree = "<group>"; };
-		8F99B27F26105F5D0042E7B5 /* RecipePuppyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyViewModel.swift; sourceTree = "<group>"; };
-		8FDB06E725FB23A1009ED57E /* ServiceLocatorSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiceLocatorSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FDB06E725FB23A1009ED57E /* SampleFluxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleFluxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FDB06EA25FB23A1009ED57E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FDB06EC25FB23A1009ED57E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8FDB06EE25FB23A1009ED57E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +83,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F1454C2266CCFE800AD5FF2 /* ModelExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8F1454C3266CD00000AD5FF2 /* RecipeExtension.swift */,
+			);
+			path = ModelExtension;
+			sourceTree = "<group>";
+		};
+		8F1454C5266CD09F00AD5FF2 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				8F4F05542664B3F6003ECAA6 /* RecipeStore.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		8F4F05502664B366003ECAA6 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				8F1454C5266CD09F00AD5FF2 /* Recipe */,
+				8F4F05512664B375003ECAA6 /* Store.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
 		8F9001C025FC879200DBED49 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				8F99B27A26105ED70042E7B5 /* RecipeScreen.swift */,
-				8F99B27F26105F5D0042E7B5 /* RecipePuppyViewModel.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -147,7 +175,7 @@
 				8F99B2762610542E0042E7B5 /* Networking */,
 				8F99B27326104B4B0042E7B5 /* SwiftUIComponents */,
 				8F90000625FB32ED00DBED49 /* README.MD */,
-				8FDB06E925FB23A1009ED57E /* ServiceLocatorSample */,
+				8FDB06E925FB23A1009ED57E /* SampleFluxApp */,
 				8FDB06E825FB23A1009ED57E /* Products */,
 				8F90021F2600747100DBED49 /* Frameworks */,
 			);
@@ -156,14 +184,16 @@
 		8FDB06E825FB23A1009ED57E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8FDB06E725FB23A1009ED57E /* ServiceLocatorSample.app */,
+				8FDB06E725FB23A1009ED57E /* SampleFluxApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8FDB06E925FB23A1009ED57E /* ServiceLocatorSample */ = {
+		8FDB06E925FB23A1009ED57E /* SampleFluxApp */ = {
 			isa = PBXGroup;
 			children = (
+				8F1454C2266CCFE800AD5FF2 /* ModelExtension */,
+				8F4F05502664B366003ECAA6 /* Stores */,
 				8FFDB7B526621FC1007FA20A /* Services */,
 				8FE887D7261087BC007A4057 /* Assets */,
 				8F99B25C260F5BC70042E7B5 /* Extension */,
@@ -176,7 +206,7 @@
 				8FDB06F825FB23A4009ED57E /* Info.plist */,
 				8FDB06F225FB23A4009ED57E /* Preview Content */,
 			);
-			path = ServiceLocatorSample;
+			path = SampleFluxApp;
 			sourceTree = "<group>";
 		};
 		8FDB06F225FB23A4009ED57E /* Preview Content */ = {
@@ -236,9 +266,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8FDB06E625FB23A1009ED57E /* ServiceLocatorSample */ = {
+		8FDB06E625FB23A1009ED57E /* SampleFluxApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FDB06FB25FB23A4009ED57E /* Build configuration list for PBXNativeTarget "ServiceLocatorSample" */;
+			buildConfigurationList = 8FDB06FB25FB23A4009ED57E /* Build configuration list for PBXNativeTarget "SampleFluxApp" */;
 			buildPhases = (
 				8FDB06E325FB23A1009ED57E /* Sources */,
 				8FDB06E425FB23A1009ED57E /* Frameworks */,
@@ -248,13 +278,13 @@
 			);
 			dependencies = (
 			);
-			name = ServiceLocatorSample;
+			name = SampleFluxApp;
 			packageProductDependencies = (
 				8F99B255260F54320042E7B5 /* SwiftUIComponents */,
 				8F99B2862610650C0042E7B5 /* Networking */,
 			);
 			productName = SwiftUISample;
-			productReference = 8FDB06E725FB23A1009ED57E /* ServiceLocatorSample.app */;
+			productReference = 8FDB06E725FB23A1009ED57E /* SampleFluxApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -271,7 +301,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8FDB06E225FB23A1009ED57E /* Build configuration list for PBXProject "ServiceLocatorSample" */;
+			buildConfigurationList = 8FDB06E225FB23A1009ED57E /* Build configuration list for PBXProject "SampleFluxApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -286,7 +316,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8FDB06E625FB23A1009ED57E /* ServiceLocatorSample */,
+				8FDB06E625FB23A1009ED57E /* SampleFluxApp */,
 			);
 		};
 /* End PBXProject section */
@@ -317,15 +347,17 @@
 				8FFDB7B426621B30007FA20A /* ServiceLocator.swift in Sources */,
 				8FDB06EB25FB23A1009ED57E /* AppDelegate.swift in Sources */,
 				8FDB06ED25FB23A1009ED57E /* SceneDelegate.swift in Sources */,
+				8F4F05552664B3F6003ECAA6 /* RecipeStore.swift in Sources */,
 				8F99B27B26105ED70042E7B5 /* RecipeScreen.swift in Sources */,
 				8F99B244260AF48F0042E7B5 /* ViewExtension.swift in Sources */,
 				8FFDB7B826622036007FA20A /* Analytics.swift in Sources */,
+				8F1454C4266CD00000AD5FF2 /* RecipeExtension.swift in Sources */,
 				8FDB070925FB2A26009ED57E /* AboutScreen.swift in Sources */,
 				8F99B25E260F5BF90042E7B5 /* AnyTransition.swift in Sources */,
-				8F99B28026105F5D0042E7B5 /* RecipePuppyViewModel.swift in Sources */,
 				8FE887CE261072C0007A4057 /* Collection.swift in Sources */,
 				8F9001BC25FC7D8000DBED49 /* TabRoutes.swift in Sources */,
 				8FE887CF261072C0007A4057 /* String.swift in Sources */,
+				8F4F05522664B375003ECAA6 /* Store.swift in Sources */,
 				8F9001C825FC8FE900DBED49 /* BindingExtension.swift in Sources */,
 				8FDB070325FB29E8009ED57E /* MainScreen.swift in Sources */,
 				8FDB06EF25FB23A1009ED57E /* ContentView.swift in Sources */,
@@ -469,15 +501,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ServiceLocatorSample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SampleFluxApp/Preview Content\"";
 				DEVELOPMENT_TEAM = U6V2L35663;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ServiceLocatorSample/Info.plist;
+				INFOPLIST_FILE = SampleFluxApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ElkaBelaya.ServiceLocatorSample;
+				PRODUCT_BUNDLE_IDENTIFIER = ElkaBelaya.SampleFluxApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -490,15 +522,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ServiceLocatorSample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SampleFluxApp/Preview Content\"";
 				DEVELOPMENT_TEAM = U6V2L35663;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ServiceLocatorSample/Info.plist;
+				INFOPLIST_FILE = SampleFluxApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ElkaBelaya.ServiceLocatorSample;
+				PRODUCT_BUNDLE_IDENTIFIER = ElkaBelaya.SampleFluxApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -508,7 +540,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8FDB06E225FB23A1009ED57E /* Build configuration list for PBXProject "ServiceLocatorSample" */ = {
+		8FDB06E225FB23A1009ED57E /* Build configuration list for PBXProject "SampleFluxApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FDB06F925FB23A4009ED57E /* Debug */,
@@ -517,7 +549,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FDB06FB25FB23A4009ED57E /* Build configuration list for PBXNativeTarget "ServiceLocatorSample" */ = {
+		8FDB06FB25FB23A4009ED57E /* Build configuration list for PBXNativeTarget "SampleFluxApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FDB06FC25FB23A4009ED57E /* Debug */,

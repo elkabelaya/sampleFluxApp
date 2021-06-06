@@ -10,9 +10,6 @@ import SwiftUIComponents
 import Networking
 
 struct RecipeCell: View {
-    
-    @EnvironmentObject var recipePuppyViewModel: RecipePuppyViewModel
-    
     var item: Recipe
     
     var body: some View {
@@ -22,7 +19,7 @@ struct RecipeCell: View {
             Text(item.ingredients.asStringOrEmpty.trim())
                 .font(.callout)
                 .foregroundColor(.gray)
-            if recipePuppyViewModel.isPageLoading && recipePuppyViewModel.items.isLast(item) {
+            /*if recipePuppyViewModel.isPageLoading && recipePuppyViewModel.items.isLast(item) {
                 Divider()
                 HStack {
                     Spacer()
@@ -30,7 +27,7 @@ struct RecipeCell: View {
                     Spacer()
                 }
                 
-            }
+            }*/
         }
     }
     
@@ -57,8 +54,13 @@ struct RecipeScreen: View {
                                   "baking"]
     private let analytics:Analytics = ServiceLocator.assembly.inject()
     @State private var selectedCategoryIndex = 0
-    @StateObject var recipePuppyViewModel: RecipePuppyViewModel = .init()
     @State private var navigationLinkSelection:String? = nil
+    @ObservedObject var recipeStore:RecipeStore = .init(
+        firstState: .init(loading: false,
+                          page: 0,
+                          category: ""),
+        reducer: recipeReducer)
+    
 
     var body: some View {
         NavigationView {
@@ -70,22 +72,21 @@ struct RecipeScreen: View {
                 })
                 .pickerStyle(SegmentedPickerStyle())
                 .onAppear(){
-                    recipePuppyViewModel.loadRecipes(category: pickerElements[selectedCategoryIndex])
+                    recipeStore.dispatch(action: .load(pickerElements[selectedCategoryIndex]))
                 }
                 .onChange(of: selectedCategoryIndex, perform: { (value) in
-                    recipePuppyViewModel.loadRecipes(category: pickerElements[value])
+                    recipeStore.dispatch(action: .load(pickerElements[value]))
                 })
-                if (recipePuppyViewModel.isPageLoading){
+                if (recipeStore.state.loading){
                     CustomActivityIndicatorView()
                 } 
-                List(recipePuppyViewModel.items) { item in
+                List(recipeStore.state.recipes) { item in
                     
                     NavigationLink(destination: RecipeDetailScreen(recipe: item), tag: item.id, selection:$navigationLinkSelection) {
                             RecipeCell(item: item)
-                                .environmentObject(recipePuppyViewModel)
                                 .onAppear() {
-                                    if recipePuppyViewModel.items.isLast(item) {
-                                        recipePuppyViewModel.loadNextPage()
+                                    if recipeStore.state.recipes.isLast(item) {
+                                        recipeStore.dispatch(action: .loadNext)
                                     }
                                 }
                                 .onTapGesture {

@@ -1,6 +1,6 @@
 //
 //  Analytics.swift
-//  ServiceLocatorSample
+//  SampleFluxApp
 //
 //  Created by Elka Belaya on 29.05.2021.
 //
