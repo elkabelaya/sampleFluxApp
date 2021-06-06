@@ -14,11 +14,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        let contentView = ContentView()
+        
         let analitics:Analytics = .init()
-        ServiceLocator.assembly.registerSingleton(singletonInstance: TabRouter())
-        ServiceLocator.assembly.registerSingleton(singletonInstance: analitics)
+        let contentView = ContentView()
+            .environmentObject(generateRecipeStore())
+            .environmentObject(analitics)
 
+        
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView: contentView)

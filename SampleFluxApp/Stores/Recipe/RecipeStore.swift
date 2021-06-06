@@ -47,4 +47,23 @@ func recipeReducer( state: inout RecipeState, action: RecipeAction ) -> Passthro
     return nil
 }
 
+func recipeAnalyticsReducer( state: inout RecipeState, action: RecipeAction ) -> PassthroughSubject<RecipeAction, Never>? {
+    switch action {
+        case .setRecipes(_):
+            let analytics: Analytics = .init()
+            analytics.event(AnalyticsEvent.recipesLoaded, ["category": state.category,"page":state.page])
+        default:
+            return nil
+    }
+    return nil
+}
+
 typealias RecipeStore = Store<RecipeState, RecipeAction>
+
+func generateRecipeStore() -> RecipeStore {
+    return RecipeStore (
+        firstState: .init(loading: false,
+                          page: 0,
+                          category: ""),
+        reducers: [recipeReducer, recipeAnalyticsReducer])
+}

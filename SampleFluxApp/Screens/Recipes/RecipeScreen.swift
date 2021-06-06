@@ -52,15 +52,10 @@ struct RecipeScreen: View {
     private var pickerElements = ["salad",
                                   "soup",
                                   "baking"]
-    private let analytics:Analytics = ServiceLocator.assembly.inject()
+    @State private var firstAppear = true;
     @State private var selectedCategoryIndex = 0
     @State private var navigationLinkSelection:String? = nil
-    @ObservedObject var recipeStore:RecipeStore = .init(
-        firstState: .init(loading: false,
-                          page: 0,
-                          category: ""),
-        reducer: recipeReducer)
-    
+    @EnvironmentObject var recipeStore:RecipeStore
 
     var body: some View {
         NavigationView {
@@ -72,7 +67,10 @@ struct RecipeScreen: View {
                 })
                 .pickerStyle(SegmentedPickerStyle())
                 .onAppear(){
-                    recipeStore.dispatch(action: .load(pickerElements[selectedCategoryIndex]))
+                    if (firstAppear){
+                        firstAppear = false
+                        recipeStore.dispatch(action: .load(pickerElements[selectedCategoryIndex]))
+                    }
                 }
                 .onChange(of: selectedCategoryIndex, perform: { (value) in
                     recipeStore.dispatch(action: .load(pickerElements[value]))
@@ -82,18 +80,20 @@ struct RecipeScreen: View {
                 } 
                 List(recipeStore.state.recipes) { item in
                     
-                    NavigationLink(destination: RecipeDetailScreen(recipe: item), tag: item.id, selection:$navigationLinkSelection) {
-                            RecipeCell(item: item)
-                                .onAppear() {
-                                    if recipeStore.state.recipes.isLast(item) {
-                                        recipeStore.dispatch(action: .loadNext)
-                                    }
+                    NavigationLink(destination: RecipeDetailScreen(recipe: item),
+                                   tag: item.id,
+                                   selection:$navigationLinkSelection)
+                    {
+                        RecipeCell(item: item)
+                            .onAppear() {
+                                if recipeStore.state.recipes.isLast(item) {
+                                    recipeStore.dispatch(action: .loadNext)
                                 }
-                                .onTapGesture {
-                                    navigationLinkSelection = item.id
-                                    analytics.event(.coctailSelect, ["title": item.title])
-                                }
-                        }//NavigationLink
+                            }
+                            .onTapGesture {
+                                navigationLinkSelection = item.id
+                            }
+                    }//NavigationLink
                         
 
                 } // List

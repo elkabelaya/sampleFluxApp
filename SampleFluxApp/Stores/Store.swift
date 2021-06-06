@@ -11,29 +11,28 @@ typealias Reducer<State, Action> =
 final class Store<State, Action>: ObservableObject {
     @Published private(set) var state: State
 
-    private let reducer: Reducer<State, Action>
+    private let reducers: [Reducer<State, Action>]
     private var cancellables: Set<AnyCancellable> = []
     
-    init(firstState: State, reducer: @escaping Reducer<State, Action>) {
+    init(firstState: State, reducers: [Reducer<State, Action>]) {
         state = firstState
-        self.reducer = reducer
+        self.reducers = reducers
     }
     
     func dispatch(action: Action) {
-        guard let effect = reducer(&state, action) else {
-            return
-        }
+        self.reducers.forEach{ reducer in
+            
+            guard let effect = reducer(&state, action) else {
+                return
+            }
 
-        effect
-            //.receive(on: DispatchQueue.main)
-            .sink(receiveValue: dispatch)
-            .store(in: &cancellables)
+            effect
+                //.receive(on: DispatchQueue.main)
+                .sink(receiveValue: dispatch)
+                .store(in: &cancellables)
+        }
     }
     
 }
 
-/*protocol Effect {
-    associatedtype Action
-    //func mapToAction() -> PassthroughSubject<Action, Never>
-}*/
 

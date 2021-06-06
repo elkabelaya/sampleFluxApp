@@ -8,12 +8,9 @@
 import SwiftUI
 
 struct MainScreen: View {
-    @StateObject var tabRouter: TabRouter = ServiceLocator.assembly.inject()
-    
-   
-    var body: some View {
+     var body: some View {
         VStack{
-            Text("This is a sample of custom injection")
+            Text("This is a sample of flux application")
                 .padding()
                 .background(Color.orange)
                 .foregroundColor(Color.white)
@@ -28,7 +25,7 @@ struct MainScreen: View {
 #if DEBUG
 struct MainScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreen().environmentObject(TabRouter())
+        MainScreen()
     }
 }
 #endif
