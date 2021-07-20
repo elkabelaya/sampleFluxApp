@@ -8,6 +8,6 @@ import Networking
 
 extension Recipe:Identifiable {
     public var id: String {
-        href
+        title
     }
 }

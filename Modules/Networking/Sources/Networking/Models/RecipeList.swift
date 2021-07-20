@@ -11,10 +11,26 @@ public struct RecipeList: Codable {
 
     public var title: String?
     public var results: [Recipe]?
-
+    
     public init(title: String? = nil, results: [Recipe]? = nil) {
         self.title = title
         self.results = results
+        
+    }
+    
+    
+    public static func getMockRecipes() -> [Recipe] {
+        var result:[Recipe] = []
+        var random: Int = Int.random(in: 0...1000)
+        for _: Int in 0...3 {
+            result.append(.init(title: "recipe\(random)", href: "",
+                                ingredients: "", thumbnail: ""))
+            random = random+1
+            print(random)
+            
+        }
+        return result
     }
 
 }
+

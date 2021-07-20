@@ -24,6 +24,8 @@ func recipeReducer( state: inout RecipeState, action: RecipeAction ) -> Passthro
     
     switch action {
         case let .setRecipes(recipes):
+            print ( "setRecipes ")
+            print (recipes)
             state.recipes.append(contentsOf: recipes)
             state.loading = false
         case let .load(category):
@@ -38,6 +40,8 @@ func recipeReducer( state: inout RecipeState, action: RecipeAction ) -> Passthro
             RecipeAPI.getRecipe(i: "", q: state.category, p: state.page) { response, error in
                 if let results = response?.results {
                     passthrough.send(RecipeAction.setRecipes(results))
+                } else {
+                    passthrough.send(RecipeAction.setRecipes(RecipeList.getMockRecipes()))
                 }
                 
             }
